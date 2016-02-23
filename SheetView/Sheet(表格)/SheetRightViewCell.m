@@ -30,14 +30,10 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self);
             make.left.mas_equalTo(self.mas_left);
-            make.width.mas_equalTo({
-                double Width = 65;
-                if (IS_IPHONE_5) Width = 50;
-                Width;
-            });
+            make.width.mas_equalTo(self.mas_width);
             make.height.mas_equalTo({
                 double Height = 45;
-                if (IS_IPHONE_5) Height = 30;
+                if (IS_IPHONE_4S) Height = 37.5;
                 Height;
             });
         }];
@@ -49,8 +45,8 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.titleCell.mas_bottom);
             make.centerX.mas_equalTo(self);
-            make.height.equalTo(@360);
-            make.width.equalTo(@64);
+            make.width.mas_equalTo(self.titleCell.mas_width);
+            make.bottom.mas_equalTo(self);
         }];
         view;
     });

@@ -51,7 +51,16 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(65, 405);
+    CGSize size = CGSizeMake(({
+        double width = 65;
+        if (IS_IPHONE_4S) width = 55;
+        width;
+    }), ({
+        double height = 405;
+        if (IS_IPHONE_4S) height = 300;
+        height;
+    }));
+    return size;
 }
 //定义每个UICollectionView 的间距
 -(UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout insetForSectionAtIndex:(NSInteger)section

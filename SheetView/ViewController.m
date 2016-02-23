@@ -25,7 +25,6 @@
 - (void)prepareUI{
     UIView *nav = ({
         UIView *view = [UIView new];
-        //        view.titleLabel.text = self.title;
         [self.view addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.right.top.mas_equalTo(self.view);
@@ -40,19 +39,18 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(nav.mas_bottom).offset(({
                 double offset = 40;
-                if (IS_IPHONE_5) offset = 30;
+                if (IS_IPHONE_4S) offset = 25;
                 offset;
             }));
             make.centerX.mas_equalTo(self.view);
             make.width.mas_equalTo({
                 double Width = 345.0;
-                if (IS_IPHONE_4S) Width = 320.0;
-                if (IS_IPHONE_5) Width = 300.0;
+                if (IS_IPHONE_4S) Width = 290;
                 Width;
             });
             make.height.mas_equalTo({
                 double height = 45.0;
-                if (IS_IPHONE_5) height = 40;
+                if (IS_IPHONE_5) height = 37.5;
                 height;
             });
         }];
@@ -64,16 +62,14 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(tpView.mas_bottom);
             make.left.mas_equalTo(tpView.mas_left);
-            //            make.width.equalTo(@85);
             make.width.mas_equalTo({
                 double Width = 85;
-                if (IS_IPHONE_5) Width = 70;
+                if (IS_IPHONE_4S) Width = 70;
                 Width;
             });
-            //            make.height.equalTo(@45);
             make.height.mas_equalTo({
                 double Height = 45;
-                if (IS_IPHONE_5) Height = 30;
+                if (IS_IPHONE_4S) Height = 37.5;
                 Height;
             });
         }];
@@ -85,8 +81,12 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(leftTitleCell.mas_bottom);
             make.left.mas_equalTo(leftTitleCell.mas_left);
-            make.height.equalTo(@360);
-            make.width.equalTo(@85);
+            make.width.mas_equalTo(leftTitleCell.mas_width);
+            make.height.mas_equalTo({
+                double Height = 360;
+                if (IS_IPHONE_4S) Height = 262.5;
+                Height;
+            });
         }];
         view;
     });

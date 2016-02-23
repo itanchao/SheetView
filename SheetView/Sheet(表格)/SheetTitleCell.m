@@ -43,10 +43,9 @@
         view.lineBreakMode = NSLineBreakByWordWrapping;
         [self addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.left.mas_equalTo(self).offset(1);
-                make.top.mas_equalTo(self).offset(0.5);
-                make.right.mas_equalTo(self).offset(-1);
-                make.bottom.mas_equalTo(self).offset(-0.5);
+            make.left.mas_equalTo(self).offset(1);
+            make.top.mas_equalTo(self).offset(1);
+            make.right.bottom.mas_equalTo(self);
         }];
         view;
     });

@@ -14,9 +14,7 @@
 @implementation SheetTopView
 - (instancetype)init{
     self = [super init];
-    self.bounds = CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 45);
     [self initSubViews];
-//    self.backgroundColor = Color(@"#d3e7fa");
     return self;
 }
 - (void)initSubViews{
