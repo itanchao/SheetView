@@ -22,17 +22,16 @@
     self.backgroundColor = [UIColor whiteColor];
     self.showsVerticalScrollIndicator = NO;
     self.bounces = NO;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(shouldScroll:) name:@"tanchaoScroll" object:nil];
+    [NOTIFICATION_CENTER addObserver:self selector:@selector(shouldScroll:) name:@"tanchaoScroll" object:nil];
     return self;
 }
 - (void)shouldScroll:(NSNotification *)not{
     if ([self isEqual:not.object]) return;
-//    CGFloat y = [[not.userInfo objectForKey:@"OffsetY"] floatValue];
     UIScrollView *scrolleView = [not.userInfo objectForKey:@"scrollView"];
     [self setContentOffset:scrolleView.contentOffset];
 }
 - (void)dealloc{
-    [[NSNotificationCenter defaultCenter] removeObserver:self name:@"tanchaoScroll" object:nil];
+    [NOTIFICATION_CENTER removeObserver:self name:@"tanchaoScroll" object:nil];
 }
 #pragma mark 数据源方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -81,7 +80,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSDictionary *dic = [NSDictionary dictionaryWithObject:scrollView forKey:@"scrollView"];
-    [[NSNotificationCenter defaultCenter] postNotificationName:@"tanchaoScroll" object:self userInfo:dic];
+    [NOTIFICATION_CENTER postNotificationName:@"tanchaoScroll" object:self userInfo:dic];
 }
 - (NSArray *)dataList{
     if (_dataList == nil) {
