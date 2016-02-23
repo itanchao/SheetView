@@ -1,0 +1,67 @@
+//
+//  SheetView-Prefix.pch
+//  SheetView
+//
+//  Created by tanchao on 16/2/23.
+//  Copyright © 2016年 谈超. All rights reserved.
+//
+
+#ifndef SheetView_Prefix_pch
+#define SheetView_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* SheetView_Prefix_pch */
+#import "UIColor+Extension.h"
+#import <Masonry/Masonry.h>
+#define Color(x)            [UIColor colorWithHexString:x]
+/**
+ *  重写NSLog,Debug模式下打印日志和当前行数
+ */
+#if DEBUG
+#define NSLog(FORMAT, ...) fprintf(stderr,"\n <line: %d> <function:%s> \n%s\n", __LINE__, __FUNCTION__,[[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);
+#else
+#define NSLog(FORMAT, ...) nil
+#endif
+/**
+ *  导航高
+ */
+#define NAVIGATIONBAR_HEIGHT            64
+/**
+ *  判断是真机还是模拟器
+ */
+#if TARGET_OS_IPHONE
+//iPhone Device
+#endif
+
+#if TARGET_IPHONE_SIMULATOR
+//iPhone Simulator
+#endif
+/**
+ *   判断是否是iPhone6p
+ */
+#define IS_IPHONE_6P ([UIScreen mainScreen].bounds.size.height > 667)
+/**
+ *   判断是否是iPhone6
+ */
+#define IS_IPHONE_6 ([UIScreen mainScreen].bounds.size.height == 667)
+/**
+ *   判断是否是iPhone5
+ */
+#define IS_IPHONE_5 ([UIScreen mainScreen].bounds.size.height == 568)
+
+/**
+ *   判断是否是iPhone4s
+ */
+#define IS_IPHONE_4S ([UIScreen mainScreen].bounds.size.height == 480)
+/**
+ *  判断是否为IOS7
+ */
+#define iOS8 ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0)
+#define iOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+
+/**
+ *  通知中心
+ */
+#define NOTIFICATION_CENTER     [NSNotificationCenter defaultCenter]
