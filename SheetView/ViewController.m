@@ -11,6 +11,7 @@
 #import "SheetLeftView.h"
 #import "SheetTitleCell.h"
 #import "SheetRightView.h"
+#import "SeparationLine.h"
 @interface ViewController ()
 
 @end
@@ -101,6 +102,7 @@
         }];
         view;
     });
+    
     UILabel *tipsLbl = ({
         UILabel *lbl = [UILabel new];
         [self.view addSubview:lbl];
@@ -114,7 +116,17 @@
         lbl;
     });
     
-    
+    SeparationLine *separation = ({
+        SeparationLine *view = [SeparationLine new];
+        [self.view addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.mas_equalTo(leftTitleCell);
+            make.bottom.mas_equalTo(leftView.mas_bottom).offset(1);
+            make.right.mas_equalTo(rightView).offset(1);
+        }];
+        [self.view sendSubviewToBack:view];
+        view;
+    });
 }
 
 - (void)didReceiveMemoryWarning {
