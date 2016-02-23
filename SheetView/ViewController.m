@@ -120,13 +120,22 @@
         SeparationLine *view = [SeparationLine new];
         [self.view addSubview:view];
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.left.mas_equalTo(leftTitleCell);
-            make.bottom.mas_equalTo(leftView.mas_bottom).offset(1);
-            make.right.mas_equalTo(rightView).offset(1);
+            make.top.bottom.right.mas_equalTo(rightView);
+            make.width.mas_equalTo(1);
         }];
-        [self.view sendSubviewToBack:view];
         view;
     });
+    SeparationLine *separation2 = ({
+        SeparationLine *view = [SeparationLine new];
+        [self.view addSubview:view];
+        [view mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.left.right.mas_equalTo(tpView);
+            make.bottom.mas_equalTo(leftView);
+            make.height.mas_equalTo(1);
+        }];
+        view;
+    });
+    
 }
 
 - (void)didReceiveMemoryWarning {
