@@ -85,7 +85,6 @@
             make.width.mas_equalTo(leftTitleCell.mas_width);
             make.height.mas_equalTo({
                 double Height = 360;
-//                if (IS_IPHONE_4S||IS_IPHONE_5) Height = 262.5;
                 if (IS_IPHONE_5) Height = 262.5;
                 if (IS_IPHONE_4S) Height = 187.5;
                 Height;
