@@ -53,11 +53,11 @@
 {
     CGSize size = CGSizeMake(({
         double width = 65;
-        if (IS_IPHONE_4S) width = 55;
+        if (IS_IPHONE_4S||IS_IPHONE_5) width = 55;
         width;
     }), ({
         double height = 405;
-        if (IS_IPHONE_4S) height = 300;
+        if (IS_IPHONE_4S||IS_IPHONE_5) height = 300;
         height;
     }));
     return size;

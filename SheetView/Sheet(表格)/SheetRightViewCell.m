@@ -33,7 +33,7 @@
             make.width.mas_equalTo(self.mas_width);
             make.height.mas_equalTo({
                 double Height = 45;
-                if (IS_IPHONE_4S) Height = 37.5;
+                if (IS_IPHONE_4S||IS_IPHONE_5) Height = 37.5;
                 Height;
             });
         }];

@@ -40,18 +40,18 @@
         [view mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(nav.mas_bottom).offset(({
                 double offset = 40;
-                if (IS_IPHONE_4S) offset = 25;
+                if (IS_IPHONE_4S||IS_IPHONE_5) offset = 25;
                 offset;
             }));
             make.centerX.mas_equalTo(self.view);
             make.width.mas_equalTo({
                 double Width = 345.0;
-                if (IS_IPHONE_4S) Width = 290;
+                if (IS_IPHONE_4S||IS_IPHONE_5) Width = 290;
                 Width;
             });
             make.height.mas_equalTo({
                 double height = 45.0;
-                if (IS_IPHONE_5) height = 37.5;
+                if (IS_IPHONE_4S||IS_IPHONE_5) height = 37.5;
                 height;
             });
         }];
@@ -65,12 +65,12 @@
             make.left.mas_equalTo(tpView.mas_left);
             make.width.mas_equalTo({
                 double Width = 85;
-                if (IS_IPHONE_4S) Width = 70;
+                if (IS_IPHONE_4S||IS_IPHONE_5) Width = 70;
                 Width;
             });
             make.height.mas_equalTo({
                 double Height = 45;
-                if (IS_IPHONE_4S) Height = 37.5;
+                if (IS_IPHONE_4S||IS_IPHONE_5) Height = 37.5;
                 Height;
             });
         }];
@@ -85,7 +85,7 @@
             make.width.mas_equalTo(leftTitleCell.mas_width);
             make.height.mas_equalTo({
                 double Height = 360;
-                if (IS_IPHONE_4S) Height = 262.5;
+                if (IS_IPHONE_4S||IS_IPHONE_5) Height = 262.5;
                 Height;
             });
         }];
