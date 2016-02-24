@@ -21,6 +21,7 @@
     [self registerClass:[SheetRightViewCell class] forCellWithReuseIdentifier:@"cell"];
     self.dataSource =self;
     self.delegate = self;
+    self.pagingEnabled = YES;
     self.backgroundColor = [UIColor whiteColor];
     self.showsVerticalScrollIndicator = NO;
     self.showsHorizontalScrollIndicator = NO;

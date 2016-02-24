@@ -22,6 +22,7 @@
     self.backgroundColor = [UIColor whiteColor];
     self.showsVerticalScrollIndicator = NO;
     self.bounces = NO;
+    self.pagingEnabled = YES;
     [NOTIFICATION_CENTER addObserver:self selector:@selector(shouldScroll:) name:SHEETVIEWSCROLL object:nil];
     return self;
 }
