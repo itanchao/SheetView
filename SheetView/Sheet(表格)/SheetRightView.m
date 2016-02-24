@@ -57,7 +57,8 @@
         width;
     }), ({
         double height = 405;
-        if (IS_IPHONE_4S||IS_IPHONE_5) height = 300;
+        if (IS_IPHONE_5) height = 300;
+        if (IS_IPHONE_4S)height = 225;
         height;
     }));
     return size;
