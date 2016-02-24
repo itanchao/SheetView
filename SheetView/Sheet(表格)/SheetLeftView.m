@@ -22,7 +22,7 @@
     self.backgroundColor = [UIColor whiteColor];
     self.showsVerticalScrollIndicator = NO;
     self.bounces = NO;
-    [NOTIFICATION_CENTER addObserver:self selector:@selector(shouldScroll:) name:@"tanchaoScroll" object:nil];
+    [NOTIFICATION_CENTER addObserver:self selector:@selector(shouldScroll:) name:SHEETVIEWSCROLL object:nil];
     return self;
 }
 - (void)shouldScroll:(NSNotification *)not{
@@ -31,7 +31,7 @@
     [self setContentOffset:scrolleView.contentOffset];
 }
 - (void)dealloc{
-    [NOTIFICATION_CENTER removeObserver:self name:@"tanchaoScroll" object:nil];
+    [NOTIFICATION_CENTER removeObserver:self name:SHEETVIEWSCROLL object:nil];
 }
 #pragma mark 数据源方法
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
@@ -80,7 +80,7 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     NSDictionary *dic = [NSDictionary dictionaryWithObject:scrollView forKey:@"scrollView"];
-    [NOTIFICATION_CENTER postNotificationName:@"tanchaoScroll" object:self userInfo:dic];
+    [NOTIFICATION_CENTER postNotificationName:SHEETVIEWSCROLL object:self userInfo:dic];
 }
 - (NSArray *)dataList{
     if (_dataList == nil) {

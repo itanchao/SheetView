@@ -65,3 +65,4 @@
  *  通知中心
  */
 #define NOTIFICATION_CENTER     [NSNotificationCenter defaultCenter]
+#define SHEETVIEWSCROLL         @"SHEETVIEWSCROLL" 
