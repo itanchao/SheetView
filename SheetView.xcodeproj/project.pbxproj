@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F3755E7B7DC9F1CD4B98676 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F038469AE38129E46DB7BB0 /* libPods.a */; };
+		7BB652924C67E040697E3CC1 /* libPods-SheetView.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6FF2FE0C747ABE967989F4 /* libPods-SheetView.a */; };
 		D5AF59AE1C7C5D7600E8A110 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF59AD1C7C5D7600E8A110 /* main.m */; };
 		D5AF59B11C7C5D7600E8A110 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF59B01C7C5D7600E8A110 /* AppDelegate.m */; };
 		D5AF59B41C7C5D7600E8A110 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5AF59B31C7C5D7600E8A110 /* ViewController.m */; };
@@ -48,7 +49,10 @@
 /* Begin PBXFileReference section */
 		01A09281F3CCED45A70F00F0 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		61422DEFF022283B3F3CAC64 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		6C6FF2FE0C747ABE967989F4 /* libPods-SheetView.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SheetView.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F038469AE38129E46DB7BB0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		96938D71EB0FE85028B9C99D /* Pods-SheetView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SheetView/Pods-SheetView.debug.xcconfig"; sourceTree = "<group>"; };
+		C9B0C26E0F58CF1141A3F961 /* Pods-SheetView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SheetView.release.xcconfig"; path = "Pods/Target Support Files/Pods-SheetView/Pods-SheetView.release.xcconfig"; sourceTree = "<group>"; };
 		D5AF59A91C7C5D7600E8A110 /* SheetView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SheetView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5AF59AD1C7C5D7600E8A110 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D5AF59AF1C7C5D7600E8A110 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -94,6 +98,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F3755E7B7DC9F1CD4B98676 /* libPods.a in Frameworks */,
+				7BB652924C67E040697E3CC1 /* libPods-SheetView.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				7F038469AE38129E46DB7BB0 /* libPods.a */,
+				6C6FF2FE0C747ABE967989F4 /* libPods-SheetView.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -236,6 +242,8 @@
 			children = (
 				01A09281F3CCED45A70F00F0 /* Pods.debug.xcconfig */,
 				61422DEFF022283B3F3CAC64 /* Pods.release.xcconfig */,
+				96938D71EB0FE85028B9C99D /* Pods-SheetView.debug.xcconfig */,
+				C9B0C26E0F58CF1141A3F961 /* Pods-SheetView.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -247,12 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D5AF59D61C7C5D7600E8A110 /* Build configuration list for PBXNativeTarget "SheetView" */;
 			buildPhases = (
-				2CABBC6BDBCA2681454BFF68 /* Check Pods Manifest.lock */,
+				2CABBC6BDBCA2681454BFF68 /* [CP] Check Pods Manifest.lock */,
 				D5AF59A51C7C5D7600E8A110 /* Sources */,
 				D5AF59A61C7C5D7600E8A110 /* Frameworks */,
 				D5AF59A71C7C5D7600E8A110 /* Resources */,
-				74A7EB68DA32D0C16CE13A4A /* Embed Pods Frameworks */,
-				DE2A79C6EE5142DBD923424E /* Copy Pods Resources */,
+				74A7EB68DA32D0C16CE13A4A /* [CP] Embed Pods Frameworks */,
+				DE2A79C6EE5142DBD923424E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -310,6 +318,7 @@
 				TargetAttributes = {
 					D5AF59A81C7C5D7600E8A110 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 3T49HA5P6P;
 					};
 					D5AF59C11C7C5D7600E8A110 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -369,49 +378,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2CABBC6BDBCA2681454BFF68 /* Check Pods Manifest.lock */ = {
+		2CABBC6BDBCA2681454BFF68 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SheetView-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		74A7EB68DA32D0C16CE13A4A /* Embed Pods Frameworks */ = {
+		74A7EB68DA32D0C16CE13A4A /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SheetView/Pods-SheetView-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DE2A79C6EE5142DBD923424E /* Copy Pods Resources */ = {
+		DE2A79C6EE5142DBD923424E /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SheetView/Pods-SheetView-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -570,9 +582,10 @@
 		};
 		D5AF59D71C7C5D7600E8A110 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 01A09281F3CCED45A70F00F0 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 96938D71EB0FE85028B9C99D /* Pods-SheetView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3T49HA5P6P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SheetView/SheetView-Prefix.pch";
 				INFOPLIST_FILE = SheetView/Info.plist;
@@ -585,9 +598,10 @@
 		};
 		D5AF59D81C7C5D7600E8A110 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61422DEFF022283B3F3CAC64 /* Pods.release.xcconfig */;
+			baseConfigurationReference = C9B0C26E0F58CF1141A3F961 /* Pods-SheetView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3T49HA5P6P;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SheetView/SheetView-Prefix.pch";
 				INFOPLIST_FILE = SheetView/Info.plist;
